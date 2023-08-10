@@ -1,10 +1,11 @@
 
 import './App.css';
-import Weather from './weather';
+import Wed from './Wed';
+
 function App() {
   return (
     <div>
-     <weather/>
+     <Wed/>
     </div>
   );
 }
