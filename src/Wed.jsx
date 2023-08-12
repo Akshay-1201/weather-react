@@ -14,7 +14,6 @@ const Wed = () => {
       .then(result => {
         setWeather(result);
         setQuery('');
-        console.log(result)
       })
     }
   }
@@ -26,7 +25,10 @@ const Wed = () => {
         </div>
         <div className='location-box'>
           <div className='location'>
-
+            {weather.name},{weather.sys.country}
+          </div>
+          <div>
+            
           </div>
         </div>
       </main>
