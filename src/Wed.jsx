@@ -17,6 +17,16 @@ const Wed = () => {
       })
     }
   }
+  const dateBuilder = (d) =>{
+    let months = ["January", "february","March", "April", "May", "June", "July", "Augest", "September","October","November", "December"];
+    let days = ["sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+    return `${day} ${date} ${month} ${year}`
+  }
   return (
     <>
       <main>
@@ -27,8 +37,8 @@ const Wed = () => {
           <div className='location'>
             {weather.name},{weather.sys.country}
           </div>
-          <div>
-            
+          <div className='date'>
+            {dateBuilder(new Date())}
           </div>
         </div>
       </main>
