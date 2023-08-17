@@ -18,18 +18,28 @@ const Wed = () => {
       })
     }
   }
-  
+  const dateBuilder =(d) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "sturday"];
+  }
   return (
-    <>
+    <div>
       <main>
         <div className='search-box'>
           <input type='text' className='search-bar' placeholder='city name' value={query} onChange={e => setQuery(e.target.value)} onKeyPress={search} />
         </div>
-        <div className='location-box'>
-          
+        <div >
+          <div className='location-box'>
+            <div className='location'>
+              {weather.name},{weather.sys.country}
+              <div className='date'>
+                {dateBuilder(new Date())}
+              </div>
+            </div>
+          </div>
         </div>
       </main>
-    </>
+    </div>
   )
 }
 
